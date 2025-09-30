@@ -1,90 +1,20 @@
-# 📦 Final Assignment: Build, Organize, and Deploy a Multipage Website
 
-You're now ready to bring everything together—HTML, CSS, JavaScript, planning, structure, and deployment. This final project challenges you to **conceptualize, build, and deploy a multi-page website** that is responsive, interactive, and ready for the real world.
+This is the website of Tech.Wow: A software business specialising in building Web Technologies, Python applications as well as Database Management systems for African people and businesses.  It operates from Lesotho in Southern Africa.
 
-This assignment will guide you from planning your site all the way to deploying it online. Let’s make your project *production-worthy*! 🚀
+The website is composed of 5 responsive web pages (index.html, about.html, service.html, gallery.html and contact.html) that are built with HTML5, CSS and Javascript. 
 
----
+When first visiting the home page, index.html, you're welcome by a blinking welcoming remark, "Welcome to our webisite!".  The motto underneath this blinking text tells the visitor who we are and what we do: "We are your number one software gurus." With these blinking text and motto, were are trying to catch the visitors' attention at first glance.
 
-## 🌐🎯 Part 1: Planning and Organizing a Multipage Website
+Then immediately we are taking you through the gallery where you will be able to browse through the loaded photos to get a snapshot of what we are doing. You will be able to interact with the photos by browsing back and forth with the "Prev and Next" buttons.  Then, underneath, we are pumping you with the information in 4 scrollable paragraphs about technology in Africa, where you will get the oppornity to learn about information why you will have to consider the services we are offering.
 
-Before you write any code, take time to plan:
+We understand that reading can be monotonous and exhausting sometimes. Therefore, we share a video that can be watched by visitors to relax their minds before navigating through our site. The vistor is able to play, pause, adjust the volume and download the video if they wish to do so. While in the Home page (index.html), you will never get lost because the sitemap indicates that you're still in the Home page with the "Home" active menu item shown in red text color. The active menu text color changes to red for every page you land to show where you are. As you are curiously exploring our Home page, wherever you click, the texts and font change dynamically. This happens also to other 4 pages mentioned.
 
-* Define your website's purpose (portfolio, product showcase, blog, etc.)
-* Outline 3–5 pages (e.g., Home, About, Services, Contact, Gallery)
-* Sketch or describe the layout of each page
-* Map out internal navigation (how pages link to one another)
+The About page(about.html) tells you only about our vision, mission, objectives and values that we uphold. 
 
-**Goal:** Show intentional structure and user journey across the site.
+The service page (service.html) shows the service we are offering in a table of 3 columns and 3 rows. The links on these services we provide take you to the contact page (contact.html), where you will be able to send us messages, comments  and request a quotation. 
 
----
+The Gallery page(gallery.htm) holds nothing other than loads of pictures that the visitor can browse through by either clicking the images in the preview panel above. When an image on a preview panel is clicked and without folowing an order, a large image version is shown underneath the preview panel. The vistor can also browse the images by using the "Previous and Next" buttons.
 
-## 🌍💻 Part 2: Build the Website Using HTML5, CSS, and JavaScript
+The Contact Page, contact.html contains a form that the user can fill to make a comment or request a quotation. The form is validated before is submited. When a submission is successful a green message thanking you is desplayed below the form. On the otherhand, when a form fails to submit a messege pops up requesting all textboxes to be filled or the user to insert right information.
 
-Using your plan, begin building:
-
-* Use HTML5 for semantic structure
-* Apply CSS for responsive layout, styling, and animations
-* Use JavaScript to add interactivity (menus, forms, toggles, dynamic content)
-
-Each page should:
-
-* Be mobile-responsive
-* Share a consistent layout/header/footer
-* Include at least one interactive element (e.g., form validation, toggle menu, animation on scroll)
-
-**Goal:** Integrate everything you’ve learned in a cohesive, functioning project.
-
----
-
-## 🛠️🚀 Part 3: Best Practices for Code Organization
-
-Before deployment, refactor your project to follow production-friendly practices:
-
-* Organize files in folders (`/css`, `/js`, `/images`, etc.)
-* Write clean, modular, and commented code
-* Use meaningful file names and relative paths
-* Validate your HTML/CSS and test on different screen sizes
-
-**Goal:** Prepare your codebase to be readable, maintainable, and scalable.
-
----
-
-## 🌐🚀 Part 4: Introduction to Hosting and Deployment
-
-Once your project is complete, choose a method to **host your site online**.
-
-You can use:
-
-* **GitHub Pages** (great for portfolios and static sites)
-* **Netlify** (powerful CI/CD features and easy form support)
-* **Vercel** (lightning-fast deployment for frontend projects)
-
-Deploy your project and confirm that:
-
-* All links and scripts work
-* It loads properly on mobile and desktop
-* It has a clear, shareable URL
-
-**Goal:** Publish your work online and make it accessible to the world.
-
----
-
-## Deliverables
-
-1. A GitHub repository containing:
-
-   * Your complete project code, properly organized
-   * A `README.md` file explaining your project purpose, structure, and live URL
-2. A live deployed website (hosted via GitHub Pages, Netlify, or Vercel)
-
----
-
-## Outcome
-
-* Clarity and thoroughness of planning documentation
-* Proper use of HTML5, CSS, and JavaScript across multiple pages
-* Responsive and accessible design
-* Clean, well-organized, and commented code
-* Successful live deployment with a working link
-* Evidence of following best practices
+Note: For this website to achieve all these, the symantic structure have been followed and all the pages have been set to run smoothly on mobile devices with small screens. Also the css been applied to give this website the applealing look and structure. The javascript helped us in animating the text, changing the text dynimically, loading and moving the images.

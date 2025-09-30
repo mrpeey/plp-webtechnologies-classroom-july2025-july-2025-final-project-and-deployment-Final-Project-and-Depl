@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Page</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <script src="scripts/script.js"></script>
+</head>
+
+<body id="textElement" onclick="changeText(this)"  onload="ShowDate()">
+
+<header>
+  <h1>tech.wow</h1>
+  <nav aria-label="Primary Sitemap">
+    <ul>
+     <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+       <li><a href="service.html">Service</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <span id="Date"></span>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <legend>
+    <h2  id="blinkingText" style="text-align:center; color:#007BFF;">Contact US</h2>
+    <form id="contact-form">
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" required /><br />
+      
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" required /><br />
+      
+      <label for="message">Message:</label><br />
+      <textarea id="message" name="message" required></textarea><br />
+      
+      <button type="submit">Send Message</button>
+    </form>
+    <br>
+
+    <p id="form-message"></p>
+  </section>
+</main>
+
+<script>
+  const form = document.getElementById('contact-form');
+  const message = document.getElementById('form-message');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    // Simple validation
+    if (!form.name.value.trim() || !form.email.value.trim() || !form.message.value.trim()) {
+      message.textContent = 'Please fill in all fields.';
+      message.style.color = 'red';
+      return;
+    }
+    // Basic email format check
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(form.email.value)) {
+      message.textContent = 'Please enter a valid email address.';
+      message.style.color = 'red';
+      return;
+    }
+
+    message.textContent = 'Thank you for contacting us. We will get back to you soon.';
+    message.style.color = 'green';
+    message.style.fontWeight ='bold';
+    message.style.alignContent ="RIGHT"
+    form.reset();
+  });
+</script>
+
+<footer id="footer">
+
+    &copy 2025 - Tech.Wow - All rights reserved.
+    
+</footer>
+
+</body>
+</html>
+
+

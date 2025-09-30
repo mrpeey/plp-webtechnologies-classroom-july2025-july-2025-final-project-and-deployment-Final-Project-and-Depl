@@ -1,0 +1,111 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Index Page</title>
+  <link rel="stylesheet" href="styles/style.css" />
+
+<script src="scripts/script.js"></script>
+
+</head>
+
+<body id="textElement" onclick="changeText(this)" onload="ShowDate()">
+
+  <header>
+
+  <h1>tech.WOW</h1>
+
+  <nav aria-label="Primary Sitemap">
+    <ul>
+     <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+       <li><a href="service.html">Service</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+  </nav>
+   <span id="Date"></span>
+</header>
+
+<main>
+   
+    <h2  id="blinkingText" style="text-align:center; color:#007BFF;">Welcome to our website!</h2>
+    <p id="motto">"We are your number one software gurus!"</p>
+
+  <section class="slider">
+    <img id="slider-image" src="images/image1.jpg" alt="Slider Image" />
+    <br>
+    <button id="prev">Prev</button>
+    <button id="next">Next</button>
+  </section>
+  
+
+<section class="content"> 
+
+<h3 style="text-align: center; font-weight: bold; text-decoration: underline; ">Technology in Africa</h3>
+ <p>African people should consider investing in web technologies, Python applications, and database systems because these tools drive business innovation and competitiveness. 
+ In a digital-first era, having a robust online presence and automated processes is essential to reach wider markets and improve customer engagement. 
+ Web technologies enable businesses to create responsive, user-friendly platforms that cater to the growing internet-savvy population.</p> 
+ 
+ <p>Python applications offer cost-effective, scalable solutions for automation, data analysis, and service delivery. 
+ Efficient database systems organize and secure data, allowing for better decision-making and operational efficiency.</p>
+
+<p>Economic landscape in Africa is rapidly transforming with increased internet penetration and smartphone adoption. 
+This shift creates a fertile ground for digital solutions to flourish and address local challenges such as supply chain inefficiencies, 
+financial inclusion, and e-commerce growth.</p>
+
+<p>Investing in modern web and Python-based applications, businesses can tailor solutions for unique regional needs, enhancing customer satisfaction and retention.
+Database systems ensure that business data, from customer records to sales transactions, is reliable and can be leveraged for strategic initiatives.
+This digital integration fosters business resilience amid evolving market demands.</p> 
+
+</section>
+
+
+<section>
+<h3 style="text-align:center; text-decoration:underline;">Multimedia</h3>
+
+    <fieldset style="background-color:antiquewhite; overflow: hidden;">
+      <legend>Multimedia</legend>
+      <h4 style="text-align:center; color:#007BFF;">Watch video</h4>
+      <video style="height: 500px; width: 500px; align-content: center;" controls>
+         <source src="multimedia/mrpeey.mp4" type="video/mp4">
+         <source src="multimedia/mrpeey.webm" type="video/webm">
+            Your browser does not support the video tag.    
+     </video> 
+     <br>
+    </fieldset>
+</section>
+
+</main>
+
+<script>
+  const images = ['images/image1.jpg', 'images/image2.jpg', 'images/image3.jpg', 'images/image4.jpg'];
+  let currentIndex = 0;
+  const sliderImage = document.getElementById('slider-image');
+  
+  document.getElementById('next').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    sliderImage.src = images[currentIndex];
+  });
+
+  document.getElementById('prev').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    sliderImage.src = images[currentIndex];
+  });
+
+</script>
+
+<footer id="footer">
+
+    &copy 2025 - Tech.Wow - All rights reserved.
+    
+</footer>
+
+</body>
+
+</html>
+

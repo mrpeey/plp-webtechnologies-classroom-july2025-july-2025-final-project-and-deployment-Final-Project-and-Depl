@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery Page</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <script src="scripts/script.js"></script>
+
+   <style>
+    body {
+      font-family: Arial, sans-serif;
+
+      background-color: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+    }
+    .gallery-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .gallery-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .gallery-grid img {
+      width: 150px;
+      height: 100px;
+      object-fit: cover;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border-color 0.3s;
+    }
+    .gallery-grid img:hover,
+    .gallery-grid img.selected {
+      border-color: #007BFF;
+    }
+    #preview {
+      margin-top: 20px;
+      text-align: center;
+    }
+    #preview img {
+      max-width: 80%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .nav-buttons {
+      margin-top: 10px;
+    }
+    .nav-buttons button {
+      padding: 8px 16px;
+      margin: 0 5px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #007BFF;
+      border: none;
+      color: white;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    .nav-buttons button:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 600px) {
+      .gallery-grid img {
+        width: 100px;
+        height: 70px;
+      }
+    }
+  </style>
+</head>
+
+<body id="textElement" onclick="changeText(this)" onload="ShowDate()">
+
+<header>
+  <h1>tech.wow</h1>
+  <nav aria-label="Primary Sitemap">
+    <ul>
+     <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+       <li><a href="service.html">Service</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <span id="Date"></span>
+  </nav>
+</header>
+
+  <main class="gallery-container">
+    <h2  id="blinkingText" style="text-align:center; color:#007BFF;">Gallery</h2>
+    <br>
+
+    <section class="gallery-grid" aria-label="Image thumbnails">
+      <!-- Gallery thumbnails -->
+      <img src="images/photo1.jpg" alt="image" data-index="0" />
+      <img src="images/photo2.jpg" alt="image" data-index="1" />
+      <img src="images/photo3.jpg" alt="image" data-index="2" />
+      <img src="images/photo4.jpg" alt="image" data-index="3" />
+      <img src="images/photo5.jpg" alt="image" data-index="4" />
+    </section>
+
+    <section id="preview" aria-live="polite" aria-atomic="true">
+      <img src="images/photo1.jpg" alt="Mountain landscape" id="mainImage" />
+      <div class="nav-buttons">
+        <button id="prevBtn" aria-label="Previous image">Previous</button>
+        <button id="nextBtn" aria-label="Next image">Next</button>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function() {
+      const images = [
+        { src: 'images/photo1.jpg', alt: 'Image' },
+        { src: 'images/photo2.jpg', alt: 'Image' },
+        { src: 'images/photo3.jpg', alt: 'Image' },
+        { src: 'images/photo4.jpg', alt: 'Image' },
+        { src: 'images/photo5.jpg', alt: 'Image' }
+      ];
+
+      const galleryGrid = document.querySelector('.gallery-grid');
+      const mainImage = document.getElementById('mainImage');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      let currentIndex = 0;
+
+      // Highlight the thumbnail corresponding to current image
+      function updateSelectedThumbnail() {
+        const thumbnails = galleryGrid.querySelectorAll('img');
+        thumbnails.forEach(img => img.classList.remove('selected'));
+        thumbnails[currentIndex].classList.add('selected');
+      }
+
+      // Function to update the main preview image
+      function updateMainImage(index) {
+        currentIndex = index;
+        mainImage.src = images[index].src;
+        mainImage.alt = images[index].alt;
+        updateSelectedThumbnail();
+      }
+
+      // Event delegation for thumbnail clicks
+      galleryGrid.addEventListener('click', (e) => {
+        if(e.target.tagName.toLowerCase() === 'img') {
+          const index = parseInt(e.target.dataset.index, 10);
+          updateMainImage(index);
+        }
+      });
+
+      // Navigation buttons
+      prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateMainImage(currentIndex);
+      });
+
+      nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateMainImage(currentIndex);
+      });
+
+      // Initialize gallery on page load
+      updateSelectedThumbnail();
+
+    })();
+  </script>
+
+  <footer id="footer">
+
+    &copy 2025 - Tech.Wow - All rights reserved.
+  </footer>
+
+</body>
+</html>
+
+
+
+

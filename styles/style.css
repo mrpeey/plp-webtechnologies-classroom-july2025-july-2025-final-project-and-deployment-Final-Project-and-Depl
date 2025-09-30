@@ -1,0 +1,266 @@
+/* Basic reset */
+* {
+  margin: 0 ;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Layout */
+
+html
+{
+ width: 100%;
+ background-color:rgb(160, 156, 156);
+}
+html, body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  height: 100%;
+  margin: 0 auto;
+  overflow:scroll;
+ 
+  
+  
+}
+
+body
+{
+ width:80%;
+ background-color:beige;
+
+}
+
+header {
+  background:#0056b3;
+  color: white;
+  padding: 1rem;
+}
+
+h1{
+
+  font-style: italic;
+  font-weight:3em;
+}
+
+/* This is the style of motto text*/
+#motto
+{
+
+  text-align: center;
+  font-style: italic;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size:medium;
+  font-weight: bold;
+  color:black;
+  padding-bottom:20px ;
+  text-decoration:wavy;
+}
+
+h1, h2 {
+      text-align: center;
+      
+    }
+h2{
+    color: #0056b3;
+    padding-top: 30px;
+    padding-bottom: 20px;
+   
+}
+h3, h4 {
+    color: #007BFF;
+}
+h3 {
+
+  text-align: left;
+  color: black;
+  padding-bottom: 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  word-spacing: 3px;
+  margin-bottom: 30px;
+}
+.content p {
+
+max-width: 80%;
+  height: auto;
+  display:flexbox;
+  margin: 0 auto;
+  text-align: justify;
+  padding: 10px;
+     
+}
+.content
+{
+padding: 10px;
+margin: auto;
+width: 80%;
+max-height: 400px;
+overflow:auto;
+background-color:aliceblue;
+
+}
+
+nav a {
+  color: white;
+  text-decoration: underline;
+
+  
+}
+/* Highlight style for active/current page */
+  nav a.active {
+    font-weight: bold;
+    color:red;
+    text-decoration:none;
+    
+  }
+
+  
+#Date
+{
+ float:right;
+margin-top: -40px;
+color: aqua;
+margin-right: 50px;
+ 
+}
+
+
+nav a:hover {
+ 
+    padding: 2px;
+    font-weight:bolder;
+    background-color:white;
+    color: #007BFF;
+    text-decoration: none;
+   
+}
+
+main {
+ 
+  
+  margin: 0 auto;
+  max-width: 80%;
+  padding-bottom: 100px;
+
+}
+main p, ul, ol{
+
+   padding-left:3em; 
+}
+main h3{
+
+padding-top: 2em;
+}
+
+/*table*/
+table {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  /* optionally set a width less than 100% */
+  width: 80%;
+}
+
+table a
+{
+
+  text-decoration:none;
+}
+  table a:hover {
+    text-decoration:underline;
+
+
+  }
+
+  /*footer*/
+
+#footer {
+
+    text-align: center;
+    margin: 0 auto;
+   padding: 30px;
+    margin-bottom:10em;
+    background: #007BFF;
+    color: white;
+    font-size:small;
+}
+
+/* Image slider styles */
+.slider {
+  position: relative;
+  max-width: 600px;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.slider img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+fieldset
+{
+max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+ position: relative;
+  max-width: 600px;
+  margin: 1rem auto;
+  text-align: center;  
+}
+
+.slider button {
+  margin: 0 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+/* Contact form */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#form-message
+{
+
+  text-align: center;
+}
+/* Responsive */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+/* Keyframe animation to move the box around */
+@keyframes moveAndSpin {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(200px, 100px) rotate(180deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+/* Animation class to trigger movement and spin */
+.animate {
+  animation: moveAndSpin 3s ease-in-out forwards;
+}
