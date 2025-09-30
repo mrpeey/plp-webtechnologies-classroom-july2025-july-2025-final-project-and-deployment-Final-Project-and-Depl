@@ -127,7 +127,7 @@ nav a {
 #Date
 {
  float:right;
-margin-top: -40px;
+margin-top: -20px;
 color: aqua;
 margin-right: 50px;
 position: relative;
@@ -171,8 +171,6 @@ table {
   max-width: 600px;
   text-align: center;
 
-  /* optionally set a width less than 100% */
-  width: 80%;
 }
 
 table a
