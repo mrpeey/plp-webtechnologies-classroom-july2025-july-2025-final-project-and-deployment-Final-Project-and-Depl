@@ -165,9 +165,10 @@ padding-top: 2em;
 /*table*/
 table {
   margin-top: 20px;
-  margin: 0 autogit;
+  margin: 0 auto;
   position: relative;
-  max-width:600px;
+  display: block;
+  max-width:100%;
   text-align: center;
 
 }
