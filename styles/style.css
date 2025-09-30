@@ -104,6 +104,11 @@ background-color:aliceblue;
 
 }
 
+header{
+
+  overflow: auto;
+}
+
 nav a {
   color: white;
   text-decoration: underline;
@@ -125,6 +130,7 @@ nav a {
 margin-top: -40px;
 color: aqua;
 margin-right: 50px;
+position: relative;
  
 }
 
