@@ -13,7 +13,7 @@ The About page(about.html) tells you only about our vision, mission, objectives 
 
 The service page (service.html) shows the service we are offering in a table of 3 columns and 3 rows. The links on these services we provide take you to the contact page (contact.html), where you will be able to send us messages, comments  and request a quotation. 
 
-The Gallery page(gallery.htm) holds nothing other than loads of pictures that the visitor can browse through by either clicking the images in the picture grid above. When an image on the grid is clicked, and without folowing any order, a large image preview is shown underneath the picture grid. While here, vistor can also browse the images by using the "Previous and Next" buttons.
+The Gallery page(gallery.htm) holds nothing other than loads of pictures that the visitor can browse through by either clicking the images in the picture grid above. When an image on the grid is clicked, and without following any order, a large image preview is shown underneath the picture grid. While here, vistor can also browse the images by using the "Previous and Next" buttons.
 
 The Contact Page, contact.html contains a form that the user can fill to make a comment or request a quotation. The form is validated before is submited. When a submission is successful a green message thanking you is displayed below the form. On the otherhand, when a form fails to submit a messege pops up requesting that all textboxes should be filled or prompts the user to insert correct information.
 
